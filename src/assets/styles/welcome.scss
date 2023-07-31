@@ -1,0 +1,44 @@
+/* welcome-page.scss */
+.welcome-page {
+    background-image: url('../images/Background.jpg');
+  
+    /* Adjust other background properties as needed (e.g., background-size, background-position, etc.) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    /* Enable the parallax effect */
+    background-attachment: fixed;
+  
+    /* Center the content vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 1;
+    /* Set a fixed height for the container */
+    height: 100vh;
+  
+    .title {
+      font-size: large;
+      margin-bottom: 2rem; /* Add some space below the title */
+      color: azure;
+    }
+  
+    p {
+      max-width: 800px; /* Optional: Limit the width of the paragraphs for better readability */
+      text-align: center; /* Center the paragraphs horizontally */
+      margin: 1rem; /* Add some space around each paragraph */
+      color: azure;
+    }
+  }
+  .rain-container {
+    /* Set the position of the Rain component */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* This ensures that the Rain component doesn't block clicks */
+  }

@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './utils/Monitoring Perfomance/reportWebVitals';
+import WelcomePage from './pages/Welcome/welcome.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <WelcomePage />
   </React.StrictMode>
 );
 
