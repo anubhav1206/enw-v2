@@ -36,3 +36,103 @@
     transform: rotate(360deg);
   }
 }
+.btn-flip {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 20px 40px; /* Increased padding for more space */
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Poppins';
+  background: linear-gradient(45deg, #007BFF, #00C4FF); /* Gradient background */
+  border: none;
+  border-radius: 8px; /* Increased border-radius for a more rounded look */
+  cursor: pointer;
+  transition: transform 300ms ease, box-shadow 300ms ease; /* Added transition for transform and box-shadow */
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added box shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added text shadow */
+}
+
+.btn-flip:hover {
+  transform: scale(1.05); /* Enlarge the button slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the box shadow on hover */
+}
+* {
+  box-sizing: border-box;
+}
+:root {  
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
+  --yellow: #F1C93B;
+
+  --red: #F31559;
+  --magenta: #FF52A2;
+  --orange: #FFB07F;
+
+  --green: #1A5D1A;
+  
+  --blue: #78C1F3;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from, to {
+    transform: scale(0);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+button {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: clamp(2em, 2vw, 4em);
+  font-weight: 400;
+  margin: 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+button > .magic {
+  display: inline-block;
+  position: relative;
+}
+
+button > .magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--red),
+    var(--orange),
+    var(--yellow),
+    var(--orange),
+    var(--red)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}

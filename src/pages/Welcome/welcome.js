@@ -33,7 +33,8 @@ const WelcomePage = () => {
                     and enrich your learning experience. 
                     Happy note-taking!
                 </p>
-                <Button class="btn-flip" label="Click Me" onClick={handleClick} />
+                <button className='btn-flip' onClick={handleClick}><span class="magic"><span class="magic-text">Click me</span></span></button>
+
             </div>
         </div>
     </main>
